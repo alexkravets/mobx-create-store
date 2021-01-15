@@ -84,7 +84,7 @@ function createStore(
       const map = {}
 
       for (const key in observables) {
-        map[key] = null
+        this[key] = observables[key]
       }
 
       return this.saveManyAsync(map)
