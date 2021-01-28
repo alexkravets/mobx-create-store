@@ -80,14 +80,15 @@ function createStore(
       return
     }
 
-    resetAsync() {
-      const map = {}
+    async resetAsync() {
+      const defaults = {}
 
       for (const key in observables) {
-        this[key] = observables[key]
+        defaults[key] = observables[key]
+        await AsyncStorage.removeItem(`${storeKey}_${key}`)
       }
 
-      return this.saveManyAsync(map)
+      this._setMap(defaults)
     }
 
     _setMap(map) {
