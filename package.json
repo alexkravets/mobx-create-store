@@ -1,6 +1,6 @@
 {
   "name": "@kravc/mobx-create-store",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "MobX create store helper for react native",
   "main": "src/index.js",
   "scripts": {
@@ -13,6 +13,6 @@
     "mobx-react": "^7.0.5"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "17.0.1"
   }
 }
